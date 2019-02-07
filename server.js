@@ -3,6 +3,7 @@ const app = express();
 const request = require('request')
 const bodyParser = require('body-parser')
 const authRoutes = require('./routes/auth-routes')
+const passportSetup = require('./config/passport-setup')
 const SERVER_PORT = process.env.PORT || 3000
 
 app.use(express.static(__dirname + '/public'));
