@@ -1,8 +1,17 @@
 const router = require('express').Router()
 
-router.get('/' , (req,res) => {
-    console.log(req.user.id)
- res.send('you are logged in ' + req.user.username)
+const authCheck = (req,res,next) => {
+if(!req.user) {
+  res.redirect('/auth/login')
+}
+else {
+    console.log(req.user)
+ next()
+}
+}
+
+router.get('/' ,authCheck ,(req,res) => {
+ res.render('index' , {user:req.user})
 })
 
 module.exports = router
