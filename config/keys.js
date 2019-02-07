@@ -5,5 +5,8 @@ google:{
 },
 mongodb:{
     dbURI:'mongodb://deepak:deepak123@ds123625.mlab.com:23625/ide'
+},
+session:{
+    cookieKey:'aws#@$%omejatb#$5oyjatboyro#@$%cksroyaljat123!$##!'
 }
 }

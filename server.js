@@ -6,17 +6,30 @@ const authRoutes = require('./routes/auth-routes')
 const passportSetup = require('./config/passport-setup')
 const mongoose = require('mongoose')
 const keys = require('./config/keys')
+const cookieSession = require('cookie-session')
+const passport = require('passport')
 const SERVER_PORT = process.env.PORT || 3000
 
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({ extended : true}));
+
 app.set('view engine' , 'hbs')
+
+app.use(cookieSession({
+    maxAge: 24 * 60 *60 *1000 ,
+    keys: [keys.session.cookieKey]
+}))
+
+app.use(passport.initialize())
+app.use(passport.session())
+
 mongoose.connect(keys.mongodb.dbURI , () => {
     console.log('sucessfully connected to mongodb at mlab!!')
 },{useNewUrlParser: true})
 
 app.use('/auth' , authRoutes)
+
 app.get('/' , (req,res) => {
   res.render('index' , {answer:null})
 }) 
@@ -31,7 +44,6 @@ app.post('/' , (req,res) => {
  const program = {
      script : script,
      language : language,
-    
      clientId : clientId,
      clientSecret : clientSecret,
      stdin  : stdin
