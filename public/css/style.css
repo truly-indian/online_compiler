@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+body{
+    background: #c31432;  
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  
+    background: linear-gradient(to right, #240b36, #c31432); 
+}
+.heading {
+   font-family:  'ZCOOL KuaiLe', cursive;
+   color: aliceblue;
+   text-align: center;
+   padding: 10px;
+   margin-top: 100px;
+   font-size: 40px;
+}
+
+.btn{
+    margin-top: 20px;
+}

@@ -2,6 +2,9 @@ const express = require('express')
 const app = express();
 const request = require('request')
 const bodyParser = require('body-parser')
+
+
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended : true}));
 app.set('view engine' , 'hbs')
 
