@@ -4,6 +4,7 @@ const request = require('request')
 const bodyParser = require('body-parser')
 
 const SERVER_PORT = process.env.PORT || 3000
+
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended : true}));
 app.set('view engine' , 'hbs')
@@ -15,14 +16,14 @@ app.get('/' , (req,res) => {
 app.post('/' , (req,res) => {
  let script = req.body.code;
  let language = req.body.language;
- let versionIndex = '0'
+
  let clientId = 'a81bbf6be91a5189126fdd4513db6a2e';
  let clientSecret = 'a8cd1898d259f552bb4fd57ad7a66e17bc689e53801472004e548c4fcf455823';
  let stdin = req.body.custom_input;
  const program = {
      script : script,
      language : language,
-     versionIndex : versionIndex,
+    
      clientId : clientId,
      clientSecret : clientSecret,
      stdin  : stdin
