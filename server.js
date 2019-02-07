@@ -18,12 +18,14 @@ app.post('/' , (req,res) => {
  let versionIndex = '0'
  let clientId = 'a81bbf6be91a5189126fdd4513db6a2e';
  let clientSecret = 'a8cd1898d259f552bb4fd57ad7a66e17bc689e53801472004e548c4fcf455823';
+ let stdin = req.body.custom_input;
  const program = {
      script : script,
      language : language,
      versionIndex : versionIndex,
      clientId : clientId,
-     clientSecret : clientSecret
+     clientSecret : clientSecret,
+     stdin  : stdin
  }
  request({
      url: 'https://api.jdoodle.com/v1/execute',
