@@ -2,13 +2,15 @@ const express = require('express')
 const app = express();
 const request = require('request')
 const bodyParser = require('body-parser')
-
+const authRoutes = require('./routes/auth-routes')
 const SERVER_PORT = process.env.PORT || 3000
 
 app.use(express.static(__dirname + '/public'));
+
 app.use(bodyParser.urlencoded({ extended : true}));
 app.set('view engine' , 'hbs')
 
+app.use('/auth' , authRoutes)
 app.get('/' , (req,res) => {
   res.render('index' , {answer:null})
 }) 
