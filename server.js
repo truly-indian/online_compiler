@@ -4,12 +4,17 @@ const request = require('request')
 const bodyParser = require('body-parser')
 const authRoutes = require('./routes/auth-routes')
 const passportSetup = require('./config/passport-setup')
+const mongoose = require('mongoose')
+const keys = require('./config/keys')
 const SERVER_PORT = process.env.PORT || 3000
 
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({ extended : true}));
 app.set('view engine' , 'hbs')
+mongoose.connect(keys.mongodb.dbURI , () => {
+    console.log('sucessfully connected to mongodb at mlab!!')
+},{useNewUrlParser: true})
 
 app.use('/auth' , authRoutes)
 app.get('/' , (req,res) => {
