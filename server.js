@@ -33,15 +33,15 @@ mongoose.connect(keys.mongodb.dbURI , () => {
 app.use('/auth' , authRoutes)
 app.use('/profile' , profileRoutes)
 app.get('/' , (req,res) => {
-  res.render('index' , {answer:null})
+  res.render('index' , {answer:null, user:req.user})
 }) 
 
 app.post('/' , (req,res) => {
  let script = req.body.code;
  let language = req.body.language;
 
- let clientId = 'a81bbf6be91a5189126fdd4513db6a2e';
- let clientSecret = 'a8cd1898d259f552bb4fd57ad7a66e17bc689e53801472004e548c4fcf455823';
+ let clientId = keys.jsdoodle.clientId;
+ let clientSecret = keys.jsdoodle.clientSecret;
  let stdin = req.body.custom_input;
  const program = {
      script : script,

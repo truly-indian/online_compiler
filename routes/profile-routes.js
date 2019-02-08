@@ -9,7 +9,9 @@ else {
  next()
 }
 }
-
+router.get('/userprofile' , (req,res) => {
+   res.render('userprofile' , {user:req.user})
+})
 router.get('/' ,authCheck ,(req,res) => {
  res.render('index' , {user:req.user})
 })
