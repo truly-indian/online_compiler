@@ -61,7 +61,7 @@ app.post('/' , (req,res) => {
           memory: body.memory,
           time:   body.cpuTime
       }
-      res.render('index' , {answer:answer})
+      res.render('index' , {answer:answer,code:program.script})
  })
  
 })
