@@ -9,6 +9,7 @@ const mongoose = require('mongoose')
 const keys = require('./config/keys')
 const cookieSession = require('cookie-session')
 const passport = require('passport')
+
 const SERVER_PORT = process.env.PORT || 3000
 
 app.use(express.static(__dirname + '/public'));
