@@ -32,6 +32,7 @@ mongoose.connect(keys.mongodb.dbURI , () => {
 
 app.use('/auth' , authRoutes)
 app.use('/profile' , profileRoutes)
+
 app.get('/' , (req,res) => {
   res.render('index' , {answer:null, user:req.user})
 }) 
@@ -61,7 +62,7 @@ app.post('/' , (req,res) => {
           memory: body.memory,
           time:   body.cpuTime
       }
-      res.render('index' , {answer:answer,code:program.script})
+      res.render('index' , {answer:answer,code:program.script, user:req.user})
  })
  
 })

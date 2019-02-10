@@ -9,6 +9,7 @@ else {
  next()
 }
 }
+
 router.get('/userprofile' , (req,res) => {
    res.render('userprofile' , {user:req.user})
 })
