@@ -40,8 +40,6 @@ app.get('/' , (req,res) => {
 app.post('/' , (req,res) => {
  let script = req.body.code;
  let language = req.body.language;
- console.log('loggin out body')
- console.log(req.body)
  let clientId = keys.jsdoodle.clientId;
  let clientSecret = keys.jsdoodle.clientSecret;
  let stdin = req.body.custom_input;
@@ -53,7 +51,7 @@ app.post('/' , (req,res) => {
      stdin  : stdin
  }
  request({
-     url: 'https://api.jdoodle.com/v1/execute',
+     url: keys.jsdoodle.url,
      method: 'POST',
      json: program
  }, (error, response ,body) => {

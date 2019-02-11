@@ -11,6 +11,7 @@ session:{
 },
 jsdoodle:{
     clientId:'a81bbf6be91a5189126fdd4513db6a2e',
-    clientSecret:'a8cd1898d259f552bb4fd57ad7a66e17bc689e53801472004e548c4fcf455823'
+    clientSecret:'a8cd1898d259f552bb4fd57ad7a66e17bc689e53801472004e548c4fcf455823',
+    url:'https://api.jdoodle.com/v1/execute'
 }
 }
