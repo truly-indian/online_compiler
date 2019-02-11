@@ -18,13 +18,12 @@ body{
 .btn{
     margin-top: 20px;
 }
-#textarea_1{
-    margin: 0; 
-	padding: 0;
-	height: 100%;
-	border: none;
-	overflow: hidden;
+@media(max-width:500px){
+    #textarea_1 {
+          width: 50px;
+    }
 }
+
 .box{
     position: absolute;
     top: 50%;
