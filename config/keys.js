@@ -14,4 +14,8 @@ jsdoodle:{
     clientSecret:'a8cd1898d259f552bb4fd57ad7a66e17bc689e53801472004e548c4fcf455823',
     url:'https://api.jdoodle.com/v1/execute'
 }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a105fd7a20b73c732d0f919af7c6a22a747760b9
