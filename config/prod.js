@@ -1,12 +1,19 @@
-if(process.env.NODE_ENV === 'production'){
+
 
     module.exports = {
-        clientId: process.env.clientId,
-        clientID: process.env.clientID,
-        clientSecret:process.env.clientSecret,
-        cookieKey:process.env.cookieKey,
-        dbURI:process.env.dbURI,
-        doodleclientSecret:process.env.doodleclientSecret,
-        url:process.env.url
+        google:{
+            clientID:process.env.googleclientID,
+            clientSecret:process.env.googleclientSecret
+        },
+        mongodb:{
+            dbURI:process.env.mongodbdbURI
+        },
+        session:{
+            cookieKey:process.env.sessioncookie
+        },
+        jsdoodle:{
+            clientId:process.env.jsdoodleclientId,
+            clientSecret:process.env.jsdoodleclientSecret,
+            url:process.env.jsdoodleurl
+        }
     }
-}
