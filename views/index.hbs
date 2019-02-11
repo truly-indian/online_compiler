@@ -12,13 +12,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script language="javascript" type="text/javascript" src="editarea_0_8_2/edit_area/edit_area_full.js"></script>
-    <script language="javascript" type="text/javascript">
-editAreaLoader.init({
-	id : "textarea_1"		// textarea id
-	,syntax: "css"			// syntax to be uses for highgliting
-	,start_highlight: true		// to display with highlight mode on start-up
-});
-</script>
+    <script language="javascript" type="text/javascript" src="js/myscript.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>
 <body>
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -57,11 +52,14 @@ editAreaLoader.init({
             <div class="col-12 col-lg-12 ">
                 <form method="POST" action="/">
                  <div class="form-group">
-                        <textarea name="code" class="form-control user_code " id="textarea_1" rows="3" placeholder="Your code here" >{{code}}</textarea>   
+                        <textarea name="code" class="form-control user_code " id="textarea_1" rows="15"cols="80"  placeholder="Your code here" >{{code}}</textarea>   
                  </div>
-                <div class="lang">
-                       <input type="text " placeholder="language" name="language" class="form-control inputcity" required>
-                </div>
+                 <div class="box">
+                      <select name="language">
+                         <option value="c">c</option>
+                         <option value="cpp">cpp</option>
+                      </select>
+                 </div>
                 <textarea class="form-control heading"  rows="2" placeholder="custom input" name="custom_input"></textarea>
                   <button  class="btn btn-primary btn-block" >Run</button>
                 </form>
