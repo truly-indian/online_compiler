@@ -15,4 +15,8 @@ jsdoodle:{
     url:'https://api.jdoodle.com/v1/execute'
 }
 }
+<<<<<<< HEAD
     
+=======
+    
+>>>>>>> 97168acc06a20e38c2e8382c7f6fde8ca18c99e5
