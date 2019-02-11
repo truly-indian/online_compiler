@@ -41,8 +41,9 @@ app.post('/' , (req,res) => {
  let script = req.body.code;
  let language = req.body.language;
  let clientId = keys.jsdoodle.clientId;
- let clientSecret = keys.jsdoodle.doodleclientSecret;
+ let clientSecret = keys.jsdoodle.clientSecret;
  let stdin = req.body.custom_input;
+ console.log(req.body)
  const program = {
      script : script,
      language : language,
