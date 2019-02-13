@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server.js"
+    "start": "node server.js"
   },
   "author": "Malik",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "mongoose": "^5.4.10",
     "nodemon": "^1.18.9",
     "passport": "^0.4.0",
+    "passport-github": "^1.1.0",
     "passport-google-oauth20": "^1.0.0",
     "request": "^2.88.0"
   }
